@@ -1,0 +1,250 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "Whats up",
+        "Can i ask a question?"
+      ],
+      "responses": [
+        "Hey, whats up? How can I help you?",
+        "Hello, thanks for visiting! What can I do for you?",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Paypal?",
+        "Are you cash only?",
+        "Do you accept GCash?",
+        "Can I pay with GCash?",
+        "How can I pay?"
+      ],
+      "responses": [
+        "We accept GCash for reservation and you can make the full payment of your \n\t    reservation in the venue upon your check in. For complete payment, we take\n\t    cash or GCash.",
+        "We accept GCash for reservations, and you may pay for your reservation in full \n\t    at the venue when you arrive. We accept cash or GCash for the full payment. ",
+        "Reservations are accepted in GCash, and you may pay for your reservation in full\n\t    when you arrive. For complete payment, we take cash or GCash."
+      ]
+    },
+    {
+      "tag": "cost",
+      "patterns": [
+        "How much does the stay per day cost?",
+        "How much is the cost on weekends?",
+        "How much is the cost on weekdays?",
+        "Is the cost the same irregardless of the day?",
+        "How much?",
+        "Rates?",
+        "What are your rates?",
+        "What is your prices?",
+        "What is your price range?"
+      ],
+      "responses": [
+        "The stay costs 6500 pesos on weekdays and 7500 Pesos on the weekends!",
+        "The cost depends on the day, 6500 pesos for the weekdays and 7500 \n\t    Pesos for the weekends!"
+      ]
+    },
+    {
+      "tag": "info",
+      "patterns": [
+        "What is DRT House?",
+        "What can we see in DRT House?",
+        "What is the purpose of DRT House?",
+        "Details?",
+        "What is your information?"
+      ],
+      "responses": [
+        "Diamante Reyes Transient House (DRT House) with Infinity Pool is a complete \n\t    medium size house with a great mountain view. If you love nature, you will love \n\t    to stay in the DRT house.",
+        "STAYCATION, PAHINGAHAN, FAMILY REUNION, BONDING RELAXATION \n\t    AND NATURE for you and with your loved one or with the whole family, all \n\t    available at DRT House!",
+        "DRT House with Infinity Pool is a small private resort that you can rent to \n\t    stay with the beautiful mountain view of the Dona Remedios Trinidad (DRT)."
+      ]
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "Where are you located?",
+        "What is your exact location?",
+        "Where can I find you?",
+        "Where is your place?",
+        "What is the nearest landmark?",
+        "Whats your location",
+        "Where are you?"
+      ],
+      "responses": [
+        "DRT House with Infinity Pool is located at  Sitio Kutad, Tanawan St. Pulong\n\t    Sampaloc DRT Bulacan. We are 5 mins away from Carribean Waves\n\t    Waterpark Resort.",
+        "We are located at Sitio Kutad, Tanawan St. Pulong Sampaloc DRT Bulacan.\n\t    We are 5 mins away from Carribean Waves Waterpark Resort.",
+        "You can locate us on Google Maps, just search for DRT House.\n\t    We are 5 mins away from Carribean Waves Waterpark Resort.",
+        "You can use the Waze application to navigate to the location of DRT House.\n\t    We are 5 mins away from Carribean Waves Waterpark Resort."
+      ]
+    },
+        {
+      "tag": "headcount",
+      "patterns": [
+        "How many people can stay in DRT House?",
+        "For how many person can stay?",
+        "How many pax?",
+        "What’s the maximum number of people can stay?",
+        "Pax?"
+      ],
+      "responses": [
+        "Up to 20 people can stay in the DRT House!",
+        "A maximum of 20 persons can stay at the DRT House.",
+        "You can stay with your family up to 20 persons at our DRT House."
+      ]
+    },
+      {
+      "tag": "room",
+      "patterns": [
+        "How many people can stay per room?",
+        "How many person can fit in your room?",
+        "How many person can stay in the teepee house?",
+        "How many people can fit in Bahay Kubo?",
+        "How many person can stay in Main House?",
+        "How many available rooms?",
+        "How many available cottage?",
+        "How many rooms?",
+        "How many cottages?",
+        "How many teepee house?",
+        "How many Bahay Kubo?"
+      ],
+      "responses": [
+        "We have one main house, one bahay kubo and two teepee house. The main\n\t    house can fit 10 persons with the double deck bed, a queen size bed, L-shaped\n\t    sofa, sofa-bed, and mattresses. We also have a one bahay kubo with a terrace\n\t    that can accommodate 3-5 people and two teepee house that can\n\t    accommodate 1-2 persons. ",
+        "There is a main home, a bahay kubo, and two teepee houses. The double deck\n\t    bed, queen size bed, L-shaped sofa, sofa-bed, and mattresses in the Main\n\t    House can accommodate ten people. We also have two teepee houses that can\n\t    accommodate 1-2 people and one Bahay kubo with a terrace that can\n\t    accommodate 3-5 people.",
+        "One main house, one bahay kubo, and two teepee houses are available.\n\t    With the double deck bed, a queen size bed, an L-shaped sofa, a sofa-bed, and\n\t    mattresses, the Main House can sleep up to ten people. We also have one Bahay\n\t    Kubo with a terrace that can sleep 3-5 people and two teepee houses that can\n\t    sleep 1-2 people."
+      ]
+    },
+    {
+      "tag": "time",
+      "patterns": [
+        "What is your Check-in and check-out time?",
+        "Can i adjust my check in time?",
+        "Can i extend my check out time?",
+        "Can i extend my time?",
+        "How many hours is our stay?",
+        "how many hours?"
+      ],
+      "responses": [
+        "For all of our lovely guest, we have 22 hours to stay in our DRT House and\n\t    our check-in time is 4:00 PM and the check-out time is 2:00 PM after the\n\t    day of your check-in. This is strictly followed by all of our guest because we\n\t    have daily guest and we need to follow the protocols and make\n\t    sanitize the DRT House for our next guest. ",
+        "We have 22 hours to stay at our DRT House for all of our wonderful guests,\n\t    with check-in at 4:00 PM and check-out at 2:00 PM after the day of your\n\t    check-in. Because we have daily guests and need to follow the regulations and\n\t    disinfect the DRT House for our next visitor, this is carefully\n\t    followed by all of our guests.",
+        "We have 22 hours to remain at our DRT House for all of our wonderful guests,\n\t    and our check-in time is 4:00 PM and check-out time is 2:00 PM after the\n\t    day of your check-in. All of our guests carefully adhere to this since we have\n\t    daily guests and need to follow regulations and disinfect the\n\t    DRT House for our next guest."
+      ]
+    },
+        {
+      "tag": "reservation",
+      "patterns": [
+        "How can I make a reservation?",
+        "Can I make a reservation on the phone?",
+        "How do I make a confirmed reservation?",
+        "Can I reserve a date?",
+        "How can I reserve?"
+      ],
+      "responses": [
+        "You can make your reservation by sending 2,000 Pesos in our GCash account and\n\t    by confirming this transaction we confirm your information for your reservation.\n\t    Our GCash number is 09326515696. Reservation fee is non-refundable if\n\t    you cancel your booking.",
+        "You may reserve your booking by depositing 2,000 pesos into our GCash account,\n\t    and by confirming this transaction, we will confirm your reservation details.\n\t    09326515696 is our GCash number. Reservation fee is non-refundable if\n\t    you cancel your booking.",
+        "We have a reservation fee of 2,000 Pesos to confirm your booking on your specified\n\t    date. Our GCash number is 09326515696. Reservation fee is non-refundable\n\t    if you cancel your booking."
+      ]
+    },
+    {
+      "tag": "contacts",
+      "patterns": [
+        "How can I reach you?",
+        "How can I contact you?",
+        "What is your contact information?",
+        "What is your contacts?",
+        "What is your number?",
+        "Do you have social media?",
+        "Do you have facebook page?",
+        "What is your facebook?"
+      ],
+      "responses": [
+        "You may reach us by calling 09326515696 or try messaging us on\n\t    Facebook by searching DRT House.",
+        "You may contact us by calling 09326515696 or try messaging us on\n\t    Facebook by searching DRT House.",
+        "You may reach us by messaging 09326515696 or try messaging us on\n\t    Facebook by searching DRT House."
+      ]
+    },
+    {
+      "tag": "amenities",
+      "patterns": [
+        "What are your amenities?",
+        "What do you offer your guests?",
+        "What services can you offer to us?",
+        "What facilities do you have?",
+        "What amenities do you have?"
+      ],
+      "responses": [
+        "DRT House has one main house with air conditioning, infinity pool, queen size bed,\n\t    double deck bed, sofa bed, L-shape sofa, 32\" flat screen tv, refrigerator, bluetooth\n\t    speaker, gas stove, rice cooker, kettle, complete kitchen utensils, fresh linen\n\t    and blankets, ihawan, and one Bahay Kubo that can accommodate 3-5\n\t    people and two teepee houses that can accommodate 1-3 people each.",
+        "We have one main house with air conditioning, infinity pool, queen size bed,\n\t    double deck bed, sofa bed, L-shape sofa, 32\" flat screen tv, refrigerator, audio\n\t    system, gas stove, rice cooker, kettle, complete kitchen utensils, fresh linen\n\t    and blankets, ihawan, and one Bahay Kubo that can accommodate 3-5\n\t    people and two teepee houses that can accommodate 1-3 people each.",
+        "DRT House has one main house with air conditioning, infinity pool, queen size bed,\n\t    double deck bed, sofa bed, L-shape sofa, 32\" flat screen tv, refrigerator, bluetooth\n\t    speaker, gas stove, rice cooker, kettle, complete kitchen utensils, fresh linen\n\t    and blankets, and ihawan, as well as one Bahay Kubo that can accommodate\n\t    3-5 people two teepee houses that can each accommodate 1-3 people."
+      ]
+    },
+        {
+      "tag": "date",
+      "patterns": [
+        "Available dates?",
+        "What are the available dates?",
+        "Available dates on july?",
+        "What are your available dates?",
+        "Dates?"
+      ],
+      "responses": [
+        "Hi, I'm sorry to say that we\"re fully booked this month of July and for the month\n\t    of August the weekdays are the only available dates. For reservations you\n\t    can contact us on 09326515696 or message us on Facebook. ",
+        "Hello, I'm sorry to announce that we're fully booked for the month of July,\n\t    and weekdays are the only open dates for August. For bookings, please call\n\t    09326515696 or send us a message on Facebook.",
+        "Hello, I'm sorry to inform you that we are fully booked for the month of July,\n\t    and the only open dates for the month of August are weekdays. For bookings,\n\t    please call 09326515696 or message us on Facebook."
+      ]
+    },
+    {
+      "tag": "pool",
+      "patterns": [
+        "How deep is your pool area?",
+        "Do you have a kids area in your pool?",
+        "How many feet is your pool?",
+        "How deep is your pool?",
+        "How deep?"
+      ],
+      "responses": [
+        "Our pool have a kiddie area that you can enjoy with your kids, and our\n\t    Pool has a 5 feet deep for the adult area.",
+        "Our pool features a kiddie area for you to enjoy with your children,\n\t    and our adult area is 5 feet deep.",
+        "Our pool offers a kiddie area that you can enjoy with your children,\n\t    as well as an adult area that is 5 feet deep."
+      ]
+    },
+    {
+      "tag": "parking",
+      "patterns": [
+        "Do you have space for parking?",
+        "Do you have area for parking?",
+        "Do you a place for parking?",
+        "Can I park my car in your area?",
+        "Do you have a parking?"
+      ],
+      "responses": [
+        "Yes, we have an allocated space for your parking.",
+        "Yes, we have a spacious area for your cars and everything.",
+        "Yes we have a place for you in the parking area."
+      ]
+    }
+  ]
+}
