@@ -5,11 +5,18 @@ import torch
 
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
+from pymongo import MongoClient
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open('intents.json', 'r') as json_data:
-    intents = json.load(json_data)
+# Connecting to PyMongo client
+client = MongoClient("mongodb+srv://admin:admin@drthouse.qalor9c.mongodb.net/?retryWrites=true&w=majority")
+database = client.database
+collection = database.intents
+collection2 = database.logs
+
+# with open('intents.json', 'r') as json_data:
+#     intents = json.load(json_data)
 
 FILE = "data.pth"
 data = torch.load(FILE)
@@ -25,27 +32,51 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "Sam"
+bot_name = "DRT House"
 
 def get_response(msg):
+    # print("Get response is running")
     sentence = tokenize(msg)
+    # print("The sentence is tokenize")
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
     X = torch.from_numpy(X).to(device)
 
     output = model(X)
+    # print("The tokenize words put in the model")
     _, predicted = torch.max(output, dim=1)
-
     tag = tags[predicted.item()]
 
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
+
+    def get_logs():
+        collection2.insert_one({"Message": msg})
+        return "I didn't quite catch that, try asking another question. "
+
+    # DATABASE SIDE
+    intents = collection.find()
+
     if prob.item() > 0.75:
-        for intent in intents['intents']:
-            if tag == intent["tag"]:
-                return random.choice(intent['responses'])
-    
-    return "I do not understand..."
+        for intent in intents:
+            if tag == intent['tag']:
+                # print("The tag that has a probability of greater than 75 percent is picked and return the random response")
+                response = random.choice(intent['responses'])
+
+                return response
+
+    return get_logs()
+
+    # # INTENTS.JSON SIDE
+    # if prob.item() > 0.75:
+    #     for intent in intents['intents']:
+    #         if tag == intent["tag"]:
+    #             # print("The tag that has a probability of greater than 75 percent is picked and return the random response")
+    #             response = random.choice(intent['responses'])
+    #
+    #             return response
+    #
+    # return "I didn't quite catch that, try asking another question. "
 
 
 if __name__ == "__main__":
@@ -57,5 +88,6 @@ if __name__ == "__main__":
             break
 
         resp = get_response(sentence)
+
         print(resp)
 

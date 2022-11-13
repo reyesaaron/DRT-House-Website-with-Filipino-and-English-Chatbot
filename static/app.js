@@ -31,6 +31,7 @@ class Chatbox {
     toggleState(chatbox) {
         this.state = !this.state;
 
+        console.log("The chatbox is clicked!")
         // show or hides the box
         if(this.state) {
             chatbox.classList.add('chatbox--active')
@@ -40,6 +41,7 @@ class Chatbox {
     }
 
     onClickButton(chatbox, event){
+        console.log("The suggestion button is clicked!")
         let text1 = event.target.value;
 
         if (text1 === "") {
@@ -72,6 +74,7 @@ class Chatbox {
     }
 
     onSendButton(chatbox) {
+        console.log("The send button is clicked!")
         var textField = chatbox.querySelector('.message');
         let text1 = textField.value
         if (text1 === "") {

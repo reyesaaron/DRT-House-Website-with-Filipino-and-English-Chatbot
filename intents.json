@@ -1,5 +1,5 @@
-  {
-  "intents": [
+{
+    "intents": [
     {
       "tag": "greeting",
       "patterns": [
@@ -21,7 +21,11 @@
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye"
+      ],
       "responses": [
         "See you later, thanks for visiting",
         "Have a nice day",
@@ -30,8 +34,17 @@
     },
     {
       "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thank's a lot!"
+      ],
+      "responses": [
+        "Happy to help!",
+        "Any time!",
+        "My pleasure"
+      ]
     },
     {
       "tag": "payments",
@@ -101,7 +114,7 @@
         "You can use the Waze application to navigate to the location of DRT House.\n\t    We are 5 mins away from Carribean Waves Waterpark Resort."
       ]
     },
-        {
+    {
       "tag": "headcount",
       "patterns": [
         "How many people can stay in DRT House?",
@@ -116,7 +129,7 @@
         "You can stay with your family up to 20 persons at our DRT House."
       ]
     },
-      {
+    {
       "tag": "room",
       "patterns": [
         "How many people can stay per room?",
@@ -153,7 +166,7 @@
         "We have 22 hours to remain at our DRT House for all of our wonderful guests,\n\t    and our check-in time is 4:00 PM and check-out time is 2:00 PM after the\n\t    day of your check-in. All of our guests carefully adhere to this since we have\n\t    daily guests and need to follow regulations and disinfect the\n\t    DRT House for our next guest."
       ]
     },
-        {
+    {
       "tag": "reservation",
       "patterns": [
         "How can I make a reservation?",
@@ -201,7 +214,7 @@
         "DRT House has one main house with air conditioning, infinity pool, queen size bed,\n\t    double deck bed, sofa bed, L-shape sofa, 32\" flat screen tv, refrigerator, bluetooth\n\t    speaker, gas stove, rice cooker, kettle, complete kitchen utensils, fresh linen\n\t    and blankets, and ihawan, as well as one Bahay Kubo that can accommodate\n\t    3-5 people two teepee houses that can each accommodate 1-3 people."
       ]
     },
-        {
+    {
       "tag": "date",
       "patterns": [
         "Available dates?",
@@ -211,9 +224,9 @@
         "Dates?"
       ],
       "responses": [
-        "Hi, I'm sorry to say that we\"re fully booked this month of July and for the month\n\t    of August the weekdays are the only available dates. For reservations you\n\t    can contact us on 09326515696 or message us on Facebook. ",
-        "Hello, I'm sorry to announce that we're fully booked for the month of July,\n\t    and weekdays are the only open dates for August. For bookings, please call\n\t    09326515696 or send us a message on Facebook.",
-        "Hello, I'm sorry to inform you that we are fully booked for the month of July,\n\t    and the only open dates for the month of August are weekdays. For bookings,\n\t    please call 09326515696 or message us on Facebook."
+        "For reservations you\n\t    can contact us on 09326515696 or message us on Facebook. ",
+        "For bookings, please call\n\t    09326515696 or send us a message on Facebook.",
+        "For bookings,\n\t    please call 09326515696 or message us on Facebook."
       ]
     },
     {
@@ -408,7 +421,7 @@
     {
       "tag": "parkingan",
       "patterns": [
-        "May esapsyo ba kayo para sa paradahan?",
+        "May espapsyo ba kayo para sa paradahan?",
         "May lugar ba kayo para sa paradahan?",
         "Pwede ko bang maiparada ang aking sasakyan sa inyong lugar?",
         "Mayroon ba kayong paradahan?",

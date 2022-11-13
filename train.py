@@ -5,30 +5,52 @@ import json
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
+from pymongo import MongoClient
 
 from nltk_utils import bag_of_words, tokenize, stem
 from model import NeuralNet
 
+# READING JSON FILE
+# with open('intents.json', 'r') as f:
+#     intents = json.load(f)
 
-with open('intents.json', 'r') as f:
-    intents = json.load(f)
+# Connecting to PyMongo client
+client = MongoClient("mongodb+srv://admin:admin@drthouse.qalor9c.mongodb.net/?retryWrites=true&w=majority")
+database = client.database
+collection = database.intents
 
 all_words = []
 tags = []
 xy = []
-# loop through each sentence in our intents patterns
-for intent in intents['intents']:
-    tag = intent['tag']
-    # add to tag list
-    tags.append(tag)
-    for pattern in intent['patterns']:
 
-        # tokenize each word in the sentence
+# DATABASE SIDE
+
+intents = collection.find()
+
+for intent in intents:
+    tags.append(intent['tag'])
+    for pattern in intent['patterns']:
         w = tokenize(pattern)
         # add to our words list
         all_words.extend(w)
         # add to xy pair
-        xy.append((w, tag))
+        xy.append((w, intent['tag']))
+
+
+# INTENTS.JSON SIDE
+# loop through each sentence in our intents patterns
+# for intent in intents['intents']:
+#     tag = intent['tag']
+#     # add to tag list
+#     tags.append(tag)
+#     for pattern in intent['patterns']:
+#         # tokenize each word in the sentence
+#         w = tokenize(pattern)
+#         # add to our words list
+#         all_words.extend(w)
+#         # add to xy pair
+#         xy.append((w, tag))
+
 
 # stem and lower each word
 ignore_words = ['?', '.', '!']
