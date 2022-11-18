@@ -14,6 +14,9 @@ class Chatbox {
     display() {
         const {openButton, chatBox, sendButton, buttons} = this.args;
 
+        alert("APP.JS IS CONNECTED!")
+
+
         openButton.addEventListener('click', () => this.toggleState(chatBox))
 
         sendButton.addEventListener('click', () => this.onSendButton(chatBox))
